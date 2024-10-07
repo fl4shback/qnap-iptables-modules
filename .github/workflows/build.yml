@@ -1,4 +1,4 @@
-name: Build ip6tables_nat kernel module for QNAP
+name: Build iptables_mangle_raw kernel modules for QNAP
 on:
     push:
         tags:
@@ -6,7 +6,7 @@ on:
 
 env:
     DOCKER_IMAGE_FILE: ${{ github.workspace }}/docker_image
-    DOCKER_IMAGE_TAG: ip6tables_nat-qnap:latest
+    DOCKER_IMAGE_TAG: iptables_mangle_raw-qnap:latest
     RELEASE_ASSET_ZIP_FILE: modules.zip
 
 jobs:
@@ -57,7 +57,7 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  name: QNAP ip6tables_nat modules ${{ github.ref }}
+                  name: QNAP iptables_mangle_raw modules ${{ github.ref }}
                   draft: false
                   prerelease: false
                   files: ${{ env.RELEASE_ASSET_ZIP_FILE }}
