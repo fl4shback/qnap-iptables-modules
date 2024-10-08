@@ -1,5 +1,5 @@
---- config
-+++ config
+--- .config
++++ .config
 @@ -1266,11 +1266,11 @@
  CONFIG_IP_NF_TARGET_MASQUERADE=m
  # CONFIG_IP_NF_TARGET_NETMAP is not set
